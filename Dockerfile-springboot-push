@@ -1,0 +1,9 @@
+# For Java 8, try this
+FROM java:8
+
+EXPOSE 8080
+
+ADD target/springboot-docker.jar springboot-docker.jar
+
+# java -jar /opt/app/app.jar
+ENTRYPOINT ["java","-jar","springboot-docker.jar"]
